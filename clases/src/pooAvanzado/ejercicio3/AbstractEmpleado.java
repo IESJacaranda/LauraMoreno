@@ -11,10 +11,9 @@ public abstract class AbstractEmpleado {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.nif = nif;
-		this.sueldo = generarSueldo();
+		this.sueldo = sueldo;		
 	}
 	
-	//Para empleado por horas
 	public AbstractEmpleado(String nombre, int edad, String nif) {
 		this.nombre = nombre;
 		this.edad = edad;
@@ -55,5 +54,5 @@ public abstract class AbstractEmpleado {
 
 	public AbstractEmpleado() {}
 	
-	public abstract double generarSueldo();
+	public abstract void generarSueldo(double sueldo);
 }

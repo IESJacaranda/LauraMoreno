@@ -12,7 +12,7 @@ public class MenuCuentaCredito {
 								"3. Mostrar saldo y crédito\n" + 
 								"4. Salir";
 	
-	public static void menuCredito(CuentaCredito cuentaCredito) {
+	public void menuCredito(CuentaCredito cuentaCredito){
 	int opcion;
 	do {
 		 System.out.println(MENU);
@@ -26,19 +26,24 @@ public class MenuCuentaCredito {
 					 cantidad = Integer.parseInt(teclado.nextLine());
 				 }while(cantidad <= 0);
 				 	cuentaCredito.ingresarDinero(cantidad);
-				 
+				 break;
 			 case 2: 
 				 double dineroASacar;
-				 dineroASacar = Integer.parseInt("Introduce la cantidad que desea sacar: ");
+				 System.out.println("Introduce la cantidad que desea sacar: ");
+				 dineroASacar = Integer.parseInt(teclado.nextLine());
 				 try {
 					 cuentaCredito.sacarDinero(dineroASacar);
 				 } catch (DineroInsuficienteException e) {
-					 e.printStackTrace();
-				 }break;
-				 
+					 System.out.println(e.getMessage());
+					 System.exit(0);
+				 } 
+					 break;
 			 case 3: 
 				 System.out.println("Su saldo es: " + cuentaCredito.getSaldo());
 				 System.out.println("Su crédito es " + cuentaCredito.getCredito());
+				 break;
+			 case 4: 
+				 System.out.println("Adiós");
 				 break;
 			 default:
 				 System.out.println("Opción incorrecta, inténtelo de nuevo.");
