@@ -4,6 +4,8 @@ import static pooAvanzado.relacion10.Ejercicio2.Gama.ALTA;
 import static pooAvanzado.relacion10.Ejercicio2.Gama.BAJA;
 import static pooAvanzado.relacion10.Ejercicio2.Gama.MEDIA;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import pooAvanzado.relacion10.Ejercicio2.Exception.CombustibleNoValidoException;
@@ -11,6 +13,7 @@ import pooAvanzado.relacion10.Ejercicio2.Exception.GamaIncorrectaException;
 import pooAvanzado.relacion10.Ejercicio2.Exception.NumPlazasInvalidoException;
 import pooAvanzado.relacion10.Ejercicio2.Exception.PMDInvalidoException;
 import pooAvanzado.relacion10.Ejercicio2.Exception.TipoIncorrectoException;
+import pooAvanzado.relacion10.Ejercicio2.Exception.VehiculoNoEncontradoException;
 
 public class Main {
 	
@@ -24,24 +27,26 @@ public class Main {
 
 	public static void GUI() {
 		int opcion;
+		AbstractVehiculo vehiculo = null;
+		List<AbstractVehiculo> listaVehiculos = new ArrayList<>();
 		do {
 			System.out.println(MENU);
 			System.out.println("Introduzca la opción que desea elegir:");
 			opcion = Integer.parseInt(teclado.nextLine());
-			AbstractVehiculo vehiculo = null;
 			switch (opcion) {
 			case 1: 
 				try {
 					vehiculo = opcion1();
+					listaVehiculos.add(vehiculo);
 				} catch (GamaIncorrectaException | TipoIncorrectoException e) {
-					e.getMessage();
+					System.out.println(e.getMessage());
 				}
 				break;
 			case 2:
 				try {
-					opcion2(vehiculo);
-				} catch (CombustibleNoValidoException e) {
-					e.printStackTrace();
+					opcion2(listaVehiculos);
+				} catch (CombustibleNoValidoException | VehiculoNoEncontradoException e) {
+					System.out.println(e.getMessage());
 				}
 				break;
 			case 3:
@@ -59,13 +64,13 @@ public class Main {
 		//GAMA
 		System.out.println("¿Qué gama de vehículo desea (alta, media o baja)?");
 		String gama = teclado.nextLine().toLowerCase();
-		if(gama != "alta" || gama != "media" || gama != "baja") {
+		if(!"alta".equals(gama) && !"media".equals(gama) && !"baja".equals(gama)) {
 			throw new GamaIncorrectaException();
 		}
 		//TIPO
 		System.out.println("Seleccione el tipo de vehículo que desea (coche, furgoneta o microbus): ");
 		String tipo = teclado.nextLine().toLowerCase();
-		if(tipo != "coche" || tipo != "furgoneta" || tipo != "microbus") {
+		if(!"coche".equals(tipo) && !"furgoneta".equals(tipo) && !"microbus".equals(tipo)) {
 			throw new TipoIncorrectoException();
 		}
 		//MATRICULA
@@ -82,11 +87,11 @@ public class Main {
 	
 	private static AbstractVehiculo devuelveVehiculo(String tipo, double gama, String matricula) {
 		AbstractVehiculo vehiculo = null;
-		if(tipo == "coche") {
+		if("coche".equals(tipo)) {
 			vehiculo = new Coche(matricula, gama);
-		}else if(tipo == "furgoneta") {
+		}else if("furgoneta".equals(tipo)) {
 			vehiculo = new Furgoneta(matricula, gama);		
-		}else if(tipo == "microbus") {
+		}else if("microbus".equals(tipo)) {
 			vehiculo = new Microbus(matricula, gama);
 		}
 		return vehiculo;
@@ -94,32 +99,37 @@ public class Main {
 	
 	private static double devuelveGama(String gama) {
 		double enumGama = ALTA.getPrecio();
-		if(gama == "alta") {
+		if("alta".equals(gama)) {
 			enumGama = ALTA.getPrecio();
-		}else if(gama == "media") {
+		}else if("media".equals(gama)) {
 			enumGama = MEDIA.getPrecio();
-		}else if(gama == "baja") {
+		}else if("baja".equals(gama)) {
 			enumGama = BAJA.getPrecio();
 		}
 		return enumGama;
 	}
 	
-	public static void opcion2(AbstractVehiculo vehiculo) throws CombustibleNoValidoException {
+	public static void opcion2(List<AbstractVehiculo> listaVehiculos) throws CombustibleNoValidoException, VehiculoNoEncontradoException {
+		//ENCUENTRA COCHE SEGÚN MATRÍCULA
 		System.out.println("Introduzca la matrícula de su vehículo");
+		String matricula = teclado.nextLine();
+		AbstractVehiculo vehiculo = encuentraVehiculo(listaVehiculos, matricula);
+		if(vehiculo == null) {
+			throw new VehiculoNoEncontradoException();
+		}else {
+		
+		//DIAS
 		System.out.println("¿Cuántos días será alquilado?");
 		int dias = Integer.parseInt(teclado.nextLine());
 		
-		if(vehiculo == null) {
-			System.out.println("El vehículo aún no se ha dado de alta.");
-		}else {
 		//COCHE
 		if(vehiculo instanceof Coche) {
 			System.out.println("¿Qué combustible desea (gasolina o diesel)?");
 			String combustible = teclado.nextLine().toLowerCase();
-			if(combustible == "gasolina") {
+			if("gasolina".equals(combustible)) {
 				System.out.println(((Coche)vehiculo).calcularPrecio(dias, 3.5));
-			}else if(combustible == "diesel") {
-				((Coche)vehiculo).calcularPrecio(dias, 2);
+			}else if("diesel".equals(combustible)) {
+				System.out.println("El precio del alquiler serán: " + ((Coche)vehiculo).calcularPrecio(dias, 2));
 			}else {
 				throw new CombustibleNoValidoException();
 			}
@@ -129,9 +139,9 @@ public class Main {
 			System.out.println("Introduzca el peso máximo autorizado (PMA)");
 			double PMA = Double.parseDouble(teclado.nextLine());
 			try {
-				System.out.println(((Furgoneta)vehiculo).calcularPrecio(dias, PMA));
+				System.out.println("El precio del alquiler serán: " + ((Furgoneta)vehiculo).calcularPrecio(dias, PMA));
 			} catch (PMDInvalidoException e) {
-				e.getMessage();
+				System.out.println(e.getMessage());
 			}
 		}
 		//MICROBUS
@@ -139,12 +149,21 @@ public class Main {
 			System.out.println("¿Cuántas plazas tiene el microbus?");
 			int plazas = Integer.parseInt(teclado.nextLine());
 			try {
-				System.out.println(((Microbus)vehiculo).calcularPrecio(dias, plazas));
+				System.out.println("El precio del alquiler serán: " + ((Microbus)vehiculo).calcularPrecio(dias, plazas));
 			} catch (NumPlazasInvalidoException e) {
-				e.getMessage();
+				System.out.println(e.getMessage());
 			}
 		}
 		}
+	}
+	
+	private static AbstractVehiculo encuentraVehiculo(List<AbstractVehiculo> listaVehiculos, String matricula) {
+		AbstractVehiculo v = null;
+		for(AbstractVehiculo i: listaVehiculos) {
+			if(i.getMatricula().equals(matricula)) {
+				v = i;
+			}
+		}return v;
 	}
 	
 }
