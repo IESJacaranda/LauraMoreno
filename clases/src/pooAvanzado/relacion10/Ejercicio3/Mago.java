@@ -11,63 +11,60 @@ import pooAvanzado.relacion10.Ejercicio3.Exception.VidaMaximaNoPermitida;
 public class Mago extends AbstractPersonaje {
 
 	private String[] hechizos = new String[4];
-	
-	public Mago(String nombre, String raza, int fuerza, int inteligencia, int vidaMaxima, String[]hechizos)
-			throws RazaNoPermitidaException, FuerzaNoPermitidaException, InteligenciaNoPermitida, VidaMaximaNoPermitida, 
+
+	public Mago(String nombre, String raza, int fuerza, int inteligencia, int vidaMaxima)
+			throws RazaNoPermitidaException, FuerzaNoPermitidaException, InteligenciaNoPermitida, VidaMaximaNoPermitida,
 			FuerzaMagoNoPermitidaException, InteligenciaMagoNoPermitida {
 		super(nombre, raza, fuerza, inteligencia, vidaMaxima);
-		//FUERZA
-		if(fuerza>15) {
+		// FUERZA
+		if (fuerza > 15) {
 			throw new FuerzaMagoNoPermitidaException();
 		}
-		//INTELIGENCIA
-		if(inteligencia<17) {
+		// INTELIGENCIA
+		if (inteligencia < 17) {
 			throw new InteligenciaMagoNoPermitida();
 		}
-		this.hechizos = hechizos;
 	}
-	
-	//MÉTODOS_PROPIOS
-	public void aprendeHechizo (String hechizo) {
+
+	// MÉTODOS_PROPIOS
+	public void aprendeHechizo(String hechizo) {
 		int cont = 0;
-		while(cont != 1) {
-			for(int i=0; i<hechizos.length;i++) {
-				if(hechizos[i] == null) {
-					hechizos[i] = hechizo;
-					cont++;
-					System.out.println("¡Hechizo aprendido!");
-				}
+		for (int i = 0; i < hechizos.length; i++) {
+			if (hechizos[i] == null) {
+				hechizos[i] = hechizo;
+				System.out.println("¡Hechizo aprendido!");
+				cont++;
+				break;
 			}
-		}
-		if(cont == 0) {
+		}if (cont == 0) {
 			System.out.println("La lista de hechizos memorizados está llena. No se puede incluir ninguno más.");
 		}
 	}
-	
+
 	public void lanzaHechizo(AbstractPersonaje personaje, String hechizo) {
-		if(personaje.getVidaActual()-10 <= 0) {
+		if (personaje.getVidaActual() - 10 <= 0) {
 			personaje.setVidaActual(0);
-		}else {
-			personaje.setVidaActual(personaje.getVidaActual()-10);
+		} else {
+			personaje.setVidaActual(personaje.getVidaActual() - 10);
 		}
-		
-		for(int i=0; i<hechizos.length;i++) {
-			if(hechizos[i].equals(hechizo)) {
+
+		for (int i = 0; i < hechizos.length; i++) {
+			if (hechizos[i] != null && hechizos[i].equals(hechizo)) {
 				hechizos[i] = null;
 				System.out.println("¡Hechizo lanzado! Ya no tienes ese hechizo.");
 			}
 		}
 	}
 
-	//TOSTRING
+	// TOSTRING
 	@Override
 	public String toString() {
-		return "MAGO. Nombre: " + nombre + ", hechizos aprendidos: " + Arrays.toString(hechizos) + ", nombre: " + nombre 
-				+ ", raza: " + raza + ", fuerza: " + fuerza + ", inteligencia: " + inteligencia + ", vidaMaxima: " + vidaMaxima 
-				+ ", vidaActual: " + vidaActual;
+		return "MAGO. Nombre: " + nombre + ", hechizos aprendidos: " + Arrays.toString(hechizos) + ", nombre: " + nombre
+				+ ", raza: " + raza + ", fuerza: " + fuerza + ", inteligencia: " + inteligencia + ", vidaMaxima: "
+				+ vidaMaxima + ", vidaActual: " + vidaActual;
 	}
 
-	//SETTERS Y GETTERS
+	// SETTERS Y GETTERS
 	@Override
 	public String getNombre() {
 		return super.getNombre();

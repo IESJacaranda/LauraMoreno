@@ -1,5 +1,9 @@
 package pooAvanzado.ejercicio2;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Yate extends Barco {
 
 	private int camarotes;
@@ -11,6 +15,14 @@ public class Yate extends Barco {
 		this.potenciaCV = potenciaCV;
 	}
 
+	public void probando() {
+		List<Yate> yates = new ArrayList<>();
+		
+		Iterator<Yate> it = yates.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
 
 
 	public double getPotenciaCV() {

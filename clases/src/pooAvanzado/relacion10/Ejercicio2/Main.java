@@ -5,6 +5,7 @@ import static pooAvanzado.relacion10.Ejercicio2.Gama.BAJA;
 import static pooAvanzado.relacion10.Ejercicio2.Gama.MEDIA;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,7 +22,6 @@ public class Main {
 	static Scanner teclado = new Scanner(System.in);
 	
 	public static void main(String[] args) {
-
 		GUI();
 	}
 

@@ -15,8 +15,8 @@ public class Main {
 		//CREACIÓN DE PERSONAJES
 		Mago A = null, B = null; Clerigo C = null;
 		try {
-			A = new Mago("Merlín", "ogro", 13, 18, 80, null);//COMO EL ARRAY PUEDEN INICIALIZAR EN NULL, PODRÍA QUITARSE DEL CONSTRUCTOR
-			B = new Mago("Zacarías", "humano", 15, 20, 70, null);
+			A = new Mago("Merlín", "orco", 13, 18, 80);
+			B = new Mago("Zacarías", "humano", 15, 20, 70);
 			C = new Clerigo("Pablo", "enano", 18, 13, 60, "Madonna");
 		} catch (RazaNoPermitidaException | FuerzaNoPermitidaException | InteligenciaNoPermitida | VidaMaximaNoPermitida
 				| FuerzaMagoNoPermitidaException | InteligenciaMagoNoPermitida| ClerigoFuerzaNoPermitida | ClerigoIteligenciaNoPermitida e) {
@@ -24,9 +24,9 @@ public class Main {
 		}
 		
 		//IMPRIMIR DATOS
-		A.toString();
-		B.toString();
-		C.toString();
+		System.out.println(A.toString());
+		System.out.println(B.toString());
+		System.out.println(C.toString());
 		
 		//APRENDER HECHIZOS
 		A.aprendeHechizo("Congelar");
@@ -34,8 +34,8 @@ public class Main {
 		B.aprendeHechizo("Controlar animales");
 		
 		//IMPRIMIR DATOS DE LOS MAGOS
-		A.toString();
-		B.toString();
+		System.out.println(A.toString());
+		System.out.println(B.toString());
 		
 		//LANZAR HECHIZOS
 		A.lanzaHechizo(B, "Congelar");
@@ -48,8 +48,8 @@ public class Main {
 		A.lanzaHechizo(B, "Lanzar Fuego");
 		
 		//VOLVER A IMPRIMIR DATOS
-		A.toString();
-		B.toString();
-		C.toString();
+		System.out.println(A.toString());
+		System.out.println(B.toString());
+		System.out.println(C.toString());
 	}
 }
