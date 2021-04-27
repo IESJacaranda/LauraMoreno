@@ -15,7 +15,7 @@ public class menu {
 			mostrarMenu();
 			opc = leerEntero("Introduzca la opción deseada");
 			switch (opc) {
-			case 1:{//SE PODRÍAN AÑADIR EXCEPCIONES PERO NO ME DA TIEMPO
+			case 1:{
 				String dni = leerCadena("Introduzca dni");
 				String nombre = leerCadena("Introduzca el nombre");
 				String tipo = leerCadena("Introduzca el tipo. Los posibles valores son ADMINISTRATIVO, OPERARIO, CONTABLE");

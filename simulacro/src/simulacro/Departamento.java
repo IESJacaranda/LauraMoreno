@@ -1,6 +1,8 @@
 package simulacro;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Departamento {
@@ -13,7 +15,7 @@ public class Departamento {
 	
 	public Departamento(String nombreDepart, List<AbstractEmpleado>empleados) {
 		this.nombreDepart = nombreDepart;
-		this.empleados = empleados;
+		this.empleados = new ArrayList<AbstractEmpleado>();
 	}
 	
 	public Departamento(String nombreDepart) {
@@ -47,7 +49,7 @@ public class Departamento {
 		
 		for(AbstractEmpleado i: empleados) {
 			if(i instanceof EmpleadBase) {
-				sueldosTotales += ((EmpleadBase)i).getSueldoBase();
+				sueldosTotales += ((EmpleadBase)i).getSueldo();
 			}else {
 				sueldosTotales += ((JefeDepartamento)i).getSueldo();
 			}
@@ -66,7 +68,16 @@ public class Departamento {
 		return sb.toString();
 	}
 	
-	//public String toStringSueldo() { NO ME HA DADO TIEMPO
+	public String toStringSueldo() { 
+		StringBuilder sb = new StringBuilder("El departamento es: ");
+		sb.append(this.nombreDepart);
+		
+		for(AbstractEmpleado i: empleados) {
+			sb.append("\n" +i.getSueldo());
+		}
+		return sb.toString();
+	}
+
 		
 	
 	//NO HE AÑADIDO EL SET DEL NOMBRE PORQUE NO SE PUEDE MODIFICAR
