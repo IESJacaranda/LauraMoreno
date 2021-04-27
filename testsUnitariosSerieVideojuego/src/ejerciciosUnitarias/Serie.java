@@ -228,5 +228,7 @@ public class Serie implements Entregable{
         this.creador=creador;
         this.entregado=false;
     }
-  
+    
+    
+
 }

@@ -4,7 +4,7 @@ import pooAvanzado.relacion10.Ejercicio3.Exception.InteligenciaNoPermitida;
 import pooAvanzado.relacion10.Ejercicio3.Exception.RazaNoPermitidaException;
 import pooAvanzado.relacion10.Ejercicio3.Exception.VidaMaximaNoPermitida;
 
-public abstract class AbstractPersonaje {
+public abstract class AbstractPersonaje implements Comparable<AbstractPersonaje>{
 	protected String nombre;
 	protected String raza;
 	protected int fuerza;
@@ -111,4 +111,18 @@ public abstract class AbstractPersonaje {
 		this.vidaActual = vidaActual;
 	}
 
+	@Override
+	public int compareTo(AbstractPersonaje otro ){
+		int result;
+		if(vidaActual == otro.getVidaActual()) {
+			result = 0;
+		}else {
+			if(vidaActual > otro.getVidaActual()) {
+				result = 1;
+			}else {
+				result = -1;
+			}
+		}
+		return result;
+	}
 }

@@ -1,5 +1,9 @@
 package pooAvanzado.relacion10.Ejercicio3;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import pooAvanzado.relacion10.Ejercicio3.Exception.ClerigoFuerzaNoPermitida;
 import pooAvanzado.relacion10.Ejercicio3.Exception.ClerigoIteligenciaNoPermitida;
 import pooAvanzado.relacion10.Ejercicio3.Exception.FuerzaMagoNoPermitidaException;
@@ -51,5 +55,9 @@ public class Main {
 		System.out.println(A.toString());
 		System.out.println(B.toString());
 		System.out.println(C.toString());
+		
+		
+		List<AbstractPersonaje> personajes = new ArrayList<>();
+		Collections.sort(personajes);
 	}
 }
