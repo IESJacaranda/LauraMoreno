@@ -1,5 +1,9 @@
 package simulacro;
 
+import static simulacro.EPuesto.ADMINISTRATIVO;
+import static simulacro.EPuesto.CONTABLE;
+import static simulacro.EPuesto.OPERARIO;
+
 import java.util.Scanner;
 
 import exception.SueldoDepartamentoException;
@@ -20,7 +24,16 @@ public class menu {
 				String nombre = leerCadena("Introduzca el nombre");
 				String tipo = leerCadena("Introduzca el tipo. Los posibles valores son ADMINISTRATIVO, OPERARIO, CONTABLE");
 				
-				AbstractEmpleado empleado = new EmpleadBase(dni, nombre, tipo);
+				EPuesto puesto = null;
+				if(tipo.equals("ADMINISTRATIVO")) {
+					puesto = ADMINISTRATIVO;
+				}else if(tipo.equals("OPERARIO")) {
+					puesto = OPERARIO;
+				}else if(tipo.equals("CONTABLE")) {
+					puesto = CONTABLE;
+				}
+				
+				AbstractEmpleado empleado = new EmpleadBase(dni, nombre, puesto);
 				d.addEmpleado(empleado);
 			}
 				break;
@@ -44,7 +57,7 @@ public class menu {
 				System.out.println(d.toString());
 				break;
 			case 5:
-				//System.out.println(d.toStringSueldo());
+				System.out.println(d.toStringSueldo());
 				break;
 			case 6:
 				System.out.println("Saliendo");
@@ -62,8 +75,8 @@ public class menu {
 	public static void mostrarMenu() {
 		System.out.println("1.- anadir empleado\n"+
 							"2.- anadir jefe\n"+
-							"3.- obtener total sueldo departamento"+
-							"4.- Mostrar departamento ordenado por nombre"+
+							"3.- obtener total sueldo departamento\n"+
+							"4.- Mostrar departamento ordenado por nombre\n"+
 							"5.- Mostrar departamento ordenado por sueldo\n"+
 							"6.- Salir\n");
 	}

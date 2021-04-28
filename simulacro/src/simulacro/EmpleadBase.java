@@ -2,22 +2,24 @@ package simulacro;
 
 public class EmpleadBase extends AbstractEmpleado implements IActualizableSueldo{
 	
-
-	public EmpleadBase(String dni, String nombre, String tipo) {
+	private EPuesto tipo;
+	private final double ACTUALIZACIONSUELDO = 1.025;
+	
+	public EmpleadBase(String dni, String nombre, EPuesto tipo, double sueldo) {
 		super(dni, nombre);
-		tipo.toUpperCase();
-		if(tipo == "ADMINISTRATIVO") {
-			setSueldo(EPuesto.ADMINISTRATIVO.getSueldoInicial());
-		}else if(tipo == "OPERARIO") {
-			setSueldo(EPuesto.OPERARIO.getSueldoInicial());
-		}else if(tipo == "CONTABLE") {
-			setSueldo(EPuesto.CONTABLE.getSueldoInicial());
-		}
+		this.tipo = tipo;
+		super.sueldo = tipo.getSueldoInicial();
+	}
+	
+	public EmpleadBase(String dni, String nombre, EPuesto tipo) {
+		super(dni, nombre);
+		this.tipo = tipo;
+		super.sueldo = tipo.getSueldoInicial();
 	}
 	
 	@Override
-	public double actualizarSueldo() {
-		return getSueldo() + (getSueldo()*INCREMENTO_EMPLEADO_BASE);
+	public void actualizarSueldo() {
+		sueldo += (sueldo*ACTUALIZACIONSUELDO);
 	}
 	
 	@Override
@@ -38,6 +40,14 @@ public class EmpleadBase extends AbstractEmpleado implements IActualizableSueldo
 	@Override
 	public void setNombre(String nombre) {
 		super.setNombre(nombre);
+	}
+
+	public EPuesto getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(EPuesto tipo) {
+		this.tipo = tipo;
 	}
 
 	

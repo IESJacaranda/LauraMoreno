@@ -2,7 +2,6 @@ package simulacro;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class Departamento {
@@ -15,11 +14,12 @@ public class Departamento {
 	
 	public Departamento(String nombreDepart, List<AbstractEmpleado>empleados) {
 		this.nombreDepart = nombreDepart;
-		this.empleados = new ArrayList<AbstractEmpleado>();
+		this.empleados = empleados;		
 	}
 	
 	public Departamento(String nombreDepart) {
 		this.nombreDepart = nombreDepart;
+		this.empleados = new ArrayList<AbstractEmpleado>();
 	}
 
 	//PODRÍA PONERSE DIRECTAMENTE QUE LA LISTA FUERA DE TIPO EMPLEADOBASE PERO ENTONCES DARÍA ERROR AL INTRODUCIR EL OBJETO
@@ -72,9 +72,11 @@ public class Departamento {
 		StringBuilder sb = new StringBuilder("El departamento es: ");
 		sb.append(this.nombreDepart);
 		
-		for(AbstractEmpleado i: empleados) {
-			sb.append("\n" +i.getSueldo());
+		Collections.sort(empleados, new OrdenaSueldo());
+		for(AbstractEmpleado e : empleados) {
+			sb.append(e.toString() + "\n");
 		}
+		
 		return sb.toString();
 	}
 
