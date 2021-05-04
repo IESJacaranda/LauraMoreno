@@ -1,43 +1,43 @@
-package cuentaTarjetaTest;
+package boletinJUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class CuentaTest {
+class AccountTest {
 
 	@Test
-	void testCuenta() {
+	void testAccount() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testIngresarDouble() {
+	void testDeposit() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testRetirarDouble() {
+	void testWithdraw() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testIngresarStringDouble() {
+	void testAddInterest() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testRetirarStringDouble() {
+	void testGetBalance() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testGetSaldo() {
+	void testGetAccountNumber() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testAddMovimiento() {
+	void testToString() {
 		fail("Not yet implemented");
 	}
 

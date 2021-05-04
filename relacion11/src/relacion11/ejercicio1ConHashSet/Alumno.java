@@ -1,7 +1,6 @@
-package relacion11.ejercicio1;
+package relacion11.ejercicio1ConHashSet;
 
-public class Alumno{
-	
+public class Alumno {
 	private String nombre;
 	private String dni;
 	
@@ -23,7 +22,7 @@ public class Alumno{
 		if (this == obj) {
 			sonIguales = true;
 		}else if (obj instanceof Alumno){
-			if(this.nombre == ((Alumno)obj).nombre && this.dni == ((Alumno)obj).dni){
+			if(this.nombre.equals(((Alumno)obj).nombre) && this.dni.equals(((Alumno)obj).dni)){
 				sonIguales = true;
 			}
 		}
@@ -45,7 +44,6 @@ public class Alumno{
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	
 	
 
 }

@@ -1,4 +1,4 @@
-package cuentaTarjetaTest;
+package dominio;
 
 import static org.junit.jupiter.api.Assertions.*;
 

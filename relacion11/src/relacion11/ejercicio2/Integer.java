@@ -1,16 +1,16 @@
-package relacion11.ejercicio1;
+package relacion11.ejercicio2;
 
-public class Alumno{
+public class Integer {
 	
 	private String nombre;
 	private String dni;
 	
-	public Alumno(String nombre, String dni) {
+	public Integer(String nombre, String dni) {
 		this.nombre = nombre;
 		this.dni = dni;
 	}
 	
-	public Alumno() {}
+	public Integer() {}
 
 	@Override
 	public String toString() {
@@ -22,8 +22,8 @@ public class Alumno{
 		boolean sonIguales = false;
 		if (this == obj) {
 			sonIguales = true;
-		}else if (obj instanceof Alumno){
-			if(this.nombre == ((Alumno)obj).nombre && this.dni == ((Alumno)obj).dni){
+		}else if (obj instanceof Integer){
+			if(this.nombre == ((Integer)obj).nombre && this.dni == ((Integer)obj).dni){
 				sonIguales = true;
 			}
 		}
@@ -45,7 +45,4 @@ public class Alumno{
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	
-	
-
 }
