@@ -1,0 +1,109 @@
+Iran,46,8,8
+Algeria,2,3,3
+Nigeria,69,13,12
+Argentina,6,13,10
+Switzerland,91,3,2
+Austria,9,3,3
+Malaysia,59,3,3
+Sweden,90,1,1
+Tuvalu,99,1,1
+French Polynesia,36,2,2
+Turkey,97,15,9
+Japan,50,31,25
+Sri Lanka,88,1,1
+Colombia,24,6,5
+Germany,38,7,7
+Saint Vincent and the Grenadines,81,1,1
+Saudi Arabia,82,5,5
+Latvia,54,2,2
+Indonesia,45,14,9
+New Zealand,68,1,1
+Angola,4,2,1
+United Kingdom,102,8,4
+Hungary,43,1,0
+Anguilla,5,1,1
+Greenland,40,1,1
+Morocco,62,3,2
+Greece,39,2,1
+Pakistan,72,5,5
+Sudan,89,2,2
+Runion,79,1,1
+South Africa,85,11,10
+Dominican Republic,27,3,3
+Afghanistan,1,1,1
+Peru,74,4,2
+Netherlands,67,5,4
+Philippines,75,20,16
+Slovakia,84,1,1
+Mexico,60,30,21
+Spain,87,5,4
+Tunisia,96,1,1
+France,34,4,4
+Bahrain,11,1,0
+Vietnam,105,6,3
+Canada,20,7,6
+Yemen,107,4,4
+Iraq,47,1,0
+Kuwait,53,1,1
+Liechtenstein,55,1,1
+Virgin Islands,106,1,1
+Chad,21,1,0
+Paraguay,73,3,3
+Venezuela,104,7,5
+Nauru,65,1,0
+Estonia,30,1,1
+Kazakstan,51,2,1
+Turkmenistan,98,1,1
+Thailand,94,3,3
+Oman,71,2,1
+Cambodia,18,2,1
+Taiwan,92,10,6
+Mozambique,63,3,3
+Ethiopia,31,1,1
+Israel,48,4,3
+American Samoa,3,1,1
+Madagascar,57,1,1
+Ecuador,28,3,1
+Puerto Rico,77,2,2
+French Guiana,35,1,1
+Brunei,16,1,1
+Myanmar,64,2,2
+Bangladesh,12,3,3
+Brazil,15,28,25
+Australia,8,1,2
+Ukraine,100,6,4
+United States,103,35,30
+Kenya,52,2,2
+Nepal,66,1,1
+Belarus,13,2,1
+China,23,53,35
+Senegal,83,1,1
+Azerbaijan,10,2,2
+Hong Kong,42,1,1
+Russian Federation,80,28,25
+Bulgaria,17,2,1
+Malawi,58,1,1
+Poland,76,8,4
+Romania,78,2,1
+Congo,25,2,2
+Finland,33,1,1
+Armenia,7,1,1
+Zambia,109,1,1
+Bolivia,14,2,2
+Egypt,29,6,4
+Yugoslavia,108,2,1
+South Korea,86,5,4
+Lithuania,56,1,0
+Chile,22,3,2
+North Korea,70,1,1
+Moldova,61,1,1
+Italy,49,7,4
+Cameroon,19,2,2
+India,44,60,53
+Gambia,37,1,0
+Czech Republic,26,1,1
+United Arab Emirates,101,3,3
+Faroe Islands,32,1,1
+Tanzania,93,3,2
+Tonga,95,1,1
+Holy See Vatican City State,41,1,1

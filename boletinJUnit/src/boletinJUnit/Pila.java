@@ -4,14 +4,14 @@ import java.util.Stack;
 
 public class Pila {
 	private Stack<Integer> pila = new Stack<Integer>();
-	// AÃ±ade el nÃºmero solo si es mayor que 2 y menor que 20
+	// Añade el número solo si es mayor que 2 y menor que 20
 	public void push (Integer num) {
 		if (num > 2 && num < 20)
 			pila.push(num);
 	}
 	/*
-	 Si la pila estÃ¡ vacÃ­a devolvemos null, sino se devuelve el
-	 Ãºltimo nÃºmero aÃ±adido a la pila sacÃ¡ndolo de la pila
+	 Si la pila está vacía devolvemos null, sino se devuelve el
+	Último número aÃ±adido a la pila sacándolo de la pila
 	*/
 	public Integer pop() {
 		if (pila.isEmpty())
@@ -19,13 +19,13 @@ public class Pila {
 		else
 			return pila.pop();
 	}
-	//Devuelve true si la pila estÃ¡ vacÃ­a, false caso contrario
+	//Devuelve true si la pila está vacía, false caso contrario
 	public boolean isEmpty() {
 		return pila.isEmpty();
 	}
 	/*
-	 Si la pila estÃ¡ vacÃ­a devolvemos null, sino se devuelve el
-	 primer nÃºmero aÃ±adido a la pila sin sacarlo
+	 Si la pila está vacía devolvemos null, sino se devuelve el
+	 primer número añadido a la pila sin sacarlo
 	*/
 	public Integer top() {
 		if (pila.isEmpty())
@@ -33,4 +33,6 @@ public class Pila {
 		else
 			return pila.peek();
 	}
+	
+	
 }

@@ -1,0 +1,109 @@
+India, idPais=44, numCiudad=60, numDirec=53
+China, idPais=23, numCiudad=53, numDirec=35
+United States, idPais=103, numCiudad=35, numDirec=30
+Brazil, idPais=15, numCiudad=28, numDirec=25
+Japan, idPais=50, numCiudad=31, numDirec=25
+Russian Federation, idPais=80, numCiudad=28, numDirec=25
+Mexico, idPais=60, numCiudad=30, numDirec=21
+Philippines, idPais=75, numCiudad=20, numDirec=16
+Nigeria, idPais=69, numCiudad=13, numDirec=12
+Argentina, idPais=6, numCiudad=13, numDirec=10
+South Africa, idPais=85, numCiudad=11, numDirec=10
+Indonesia, idPais=45, numCiudad=14, numDirec=9
+Turkey, idPais=97, numCiudad=15, numDirec=9
+Iran, idPais=46, numCiudad=8, numDirec=8
+Germany, idPais=38, numCiudad=7, numDirec=7
+Canada, idPais=20, numCiudad=7, numDirec=6
+Taiwan, idPais=92, numCiudad=10, numDirec=6
+Colombia, idPais=24, numCiudad=6, numDirec=5
+Pakistan, idPais=72, numCiudad=5, numDirec=5
+Saudi Arabia, idPais=82, numCiudad=5, numDirec=5
+Venezuela, idPais=104, numCiudad=7, numDirec=5
+Egypt, idPais=29, numCiudad=6, numDirec=4
+France, idPais=34, numCiudad=4, numDirec=4
+Italy, idPais=49, numCiudad=7, numDirec=4
+Netherlands, idPais=67, numCiudad=5, numDirec=4
+Poland, idPais=76, numCiudad=8, numDirec=4
+South Korea, idPais=86, numCiudad=5, numDirec=4
+Spain, idPais=87, numCiudad=5, numDirec=4
+Ukraine, idPais=100, numCiudad=6, numDirec=4
+United Kingdom, idPais=102, numCiudad=8, numDirec=4
+Yemen, idPais=107, numCiudad=4, numDirec=4
+Algeria, idPais=2, numCiudad=3, numDirec=3
+Austria, idPais=9, numCiudad=3, numDirec=3
+Bangladesh, idPais=12, numCiudad=3, numDirec=3
+Dominican Republic, idPais=27, numCiudad=3, numDirec=3
+Israel, idPais=48, numCiudad=4, numDirec=3
+Malaysia, idPais=59, numCiudad=3, numDirec=3
+Mozambique, idPais=63, numCiudad=3, numDirec=3
+Paraguay, idPais=73, numCiudad=3, numDirec=3
+Thailand, idPais=94, numCiudad=3, numDirec=3
+United Arab Emirates, idPais=101, numCiudad=3, numDirec=3
+Vietnam, idPais=105, numCiudad=6, numDirec=3
+Australia, idPais=8, numCiudad=1, numDirec=2
+Azerbaijan, idPais=10, numCiudad=2, numDirec=2
+Bolivia, idPais=14, numCiudad=2, numDirec=2
+Cameroon, idPais=19, numCiudad=2, numDirec=2
+Chile, idPais=22, numCiudad=3, numDirec=2
+Congo, idPais=25, numCiudad=2, numDirec=2
+French Polynesia, idPais=36, numCiudad=2, numDirec=2
+Kenya, idPais=52, numCiudad=2, numDirec=2
+Latvia, idPais=54, numCiudad=2, numDirec=2
+Morocco, idPais=62, numCiudad=3, numDirec=2
+Myanmar, idPais=64, numCiudad=2, numDirec=2
+Peru, idPais=74, numCiudad=4, numDirec=2
+Puerto Rico, idPais=77, numCiudad=2, numDirec=2
+Sudan, idPais=89, numCiudad=2, numDirec=2
+Switzerland, idPais=91, numCiudad=3, numDirec=2
+Tanzania, idPais=93, numCiudad=3, numDirec=2
+Afghanistan, idPais=1, numCiudad=1, numDirec=1
+American Samoa, idPais=3, numCiudad=1, numDirec=1
+Angola, idPais=4, numCiudad=2, numDirec=1
+Anguilla, idPais=5, numCiudad=1, numDirec=1
+Armenia, idPais=7, numCiudad=1, numDirec=1
+Belarus, idPais=13, numCiudad=2, numDirec=1
+Brunei, idPais=16, numCiudad=1, numDirec=1
+Bulgaria, idPais=17, numCiudad=2, numDirec=1
+Cambodia, idPais=18, numCiudad=2, numDirec=1
+Czech Republic, idPais=26, numCiudad=1, numDirec=1
+Ecuador, idPais=28, numCiudad=3, numDirec=1
+Estonia, idPais=30, numCiudad=1, numDirec=1
+Ethiopia, idPais=31, numCiudad=1, numDirec=1
+Faroe Islands, idPais=32, numCiudad=1, numDirec=1
+Finland, idPais=33, numCiudad=1, numDirec=1
+French Guiana, idPais=35, numCiudad=1, numDirec=1
+Greece, idPais=39, numCiudad=2, numDirec=1
+Greenland, idPais=40, numCiudad=1, numDirec=1
+Holy See Vatican City State, idPais=41, numCiudad=1, numDirec=1
+Hong Kong, idPais=42, numCiudad=1, numDirec=1
+Kazakstan, idPais=51, numCiudad=2, numDirec=1
+Kuwait, idPais=53, numCiudad=1, numDirec=1
+Liechtenstein, idPais=55, numCiudad=1, numDirec=1
+Madagascar, idPais=57, numCiudad=1, numDirec=1
+Malawi, idPais=58, numCiudad=1, numDirec=1
+Moldova, idPais=61, numCiudad=1, numDirec=1
+Nepal, idPais=66, numCiudad=1, numDirec=1
+New Zealand, idPais=68, numCiudad=1, numDirec=1
+North Korea, idPais=70, numCiudad=1, numDirec=1
+Oman, idPais=71, numCiudad=2, numDirec=1
+Romania, idPais=78, numCiudad=2, numDirec=1
+Runion, idPais=79, numCiudad=1, numDirec=1
+Saint Vincent and the Grenadines, idPais=81, numCiudad=1, numDirec=1
+Senegal, idPais=83, numCiudad=1, numDirec=1
+Slovakia, idPais=84, numCiudad=1, numDirec=1
+Sri Lanka, idPais=88, numCiudad=1, numDirec=1
+Sweden, idPais=90, numCiudad=1, numDirec=1
+Tonga, idPais=95, numCiudad=1, numDirec=1
+Tunisia, idPais=96, numCiudad=1, numDirec=1
+Turkmenistan, idPais=98, numCiudad=1, numDirec=1
+Tuvalu, idPais=99, numCiudad=1, numDirec=1
+Virgin Islands, idPais=106, numCiudad=1, numDirec=1
+Yugoslavia, idPais=108, numCiudad=2, numDirec=1
+Zambia, idPais=109, numCiudad=1, numDirec=1
+Bahrain, idPais=11, numCiudad=1, numDirec=0
+Chad, idPais=21, numCiudad=1, numDirec=0
+Gambia, idPais=37, numCiudad=1, numDirec=0
+Hungary, idPais=43, numCiudad=1, numDirec=0
+Iraq, idPais=47, numCiudad=1, numDirec=0
+Lithuania, idPais=56, numCiudad=1, numDirec=0
+Nauru, idPais=65, numCiudad=1, numDirec=0

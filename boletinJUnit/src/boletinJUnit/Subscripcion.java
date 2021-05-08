@@ -34,10 +34,4 @@ public class Subscripcion {
 		periodo = 0 ;
 	}
 	
-	public static void main(String[] args) {
-		Subscripcion s2  = new Subscripcion(12,5);
-		System.out.println(s2.precioPorMes());
-	}
-	
-	
 }
