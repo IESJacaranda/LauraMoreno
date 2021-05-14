@@ -10,7 +10,7 @@ public class PersonalDireccion extends Profesor {
 	}
 
 	public PersonalDireccion(String nombre, int edad, String genero, String horario,
-			String contrasena, String departamento, String curso, String modulo, String ubicación, String competencias) {
+			String contrasena, String departamento, String curso, String modulo, String ubicacion, String competencias) {
 		super(nombre, edad, genero, horario, contrasena, departamento, curso, modulo);
 		this.ubicacion = ubicacion;
 		this.competencias = competencias;

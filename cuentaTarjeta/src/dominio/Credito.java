@@ -18,18 +18,18 @@ public class Credito extends Tarjeta
 	public void retirar(double x) throws Exception 
 	{
 		Movimiento m=new Movimiento();
-		m.setConcepto("Retirada en cajero automático");
-		x=(x*0.05<3.0 ? 3 : x*0.05);  // Añadimos una comisión de un 5%, mínimo de 3 euros.
+		m.setConcepto("Retirada en cajero automï¿½tico");
+		x=(x*0.05<3.0 ? 3 : x*0.05);  // Aï¿½adimos una comisiï¿½n de un 5%, mï¿½nimo de 3 euros.
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 		if (x>getCreditoDisponible())
-			throw new Exception("Crédito insuficiente");
+			throw new Exception("Crï¿½dito insuficiente");
 	}
 	
 	public void ingresar(double x) throws Exception 
 	{
 		Movimiento m=new Movimiento();
-		m.setConcepto("Ingreso en cuenta asociada (cajero automático)");
+		m.setConcepto("Ingreso en cuenta asociada (cajero automï¿½tico)");
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 		mCuentaAsociada.ingresar(x);
@@ -38,7 +38,7 @@ public class Credito extends Tarjeta
 	public void pagoEnEstablecimiento(String datos, double x) throws Exception 
 	{
 		Movimiento m=new Movimiento();
-		m.setConcepto("Compra a crédito en: " + datos);
+		m.setConcepto("Compra a crï¿½dito en: " + datos);
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 	}
@@ -59,15 +59,15 @@ public class Credito extends Tarjeta
 		return mCredito-getSaldo();
 	}
 	
-	public void liquidar(int mes, int año) 
+	public void liquidar(int mes, int anyo) 
 	{
 		Movimiento liq=new Movimiento();
-		liq.setConcepto("Liquidación de operaciones tarj. crédito, " + (mes+1) + " de " + (año+1900));
+		liq.setConcepto("Liquidaciï¿½n de operaciones tarj. crï¿½dito, " + (mes+1) + " de " + (anyo+1900));
 		double r=0.0;
 		for (int i=0; i<this.mMovimientos.size(); i++) 
 		{
 			Movimiento m=(Movimiento) mMovimientos.elementAt(i);
-			if (m.getFecha().getMonth()+1==mes && m.getFecha().getYear()+1900==año)
+			if (m.getFecha().getMonth()+1==mes && m.getFecha().getYear()+1900==anyo)
 				r+=m.getImporte();
 		}
 		liq.setImporte(r);

@@ -13,7 +13,7 @@ public class Agencia {
 		this.direccion = direccion; 
 	}
 
-	public void añadirReserva(Reservacion reserva) {
+	public void anyadirReserva(Reservacion reserva) {
 		this.reservas.add(reserva);
 	}
 	

@@ -27,7 +27,7 @@ public class Coche {
 		this.detallesReservas.add(detallesReserva);
 	}
 	
-	public void añadirReserva(Reservacion reserva) {
+	public void anyadirReserva(Reservacion reserva) {
 		this.reservas.add(reserva);
 	}	
 

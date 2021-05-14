@@ -15,7 +15,7 @@ class SubscripcionTest {
 		assertEquals(3.0, s2.precioPorMes());
 		
 		Subscripcion s3  = new Subscripcion(12,5);
-		assertEquals(3.4, s3.precioPorMes());
+		assertEquals(2.41, s3.precioPorMes());
 		
 		Subscripcion s4  = new Subscripcion(-12,5);
 		assertEquals(0.0, s4.precioPorMes());
