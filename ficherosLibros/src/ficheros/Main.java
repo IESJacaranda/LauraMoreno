@@ -56,7 +56,7 @@ public class Main {
 				//GENERAR UN ARCHIVO JSON CUANDO COGEMOS DATOS DE OTRO TIPO DE ARCHIVO (CON TO DO YA CARGADO)
 				
 				final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-				final String resul = gson.toJson(c.getProvincias());
+				final String resul = gson.toJson(c);
 
 				
 				FileWriter fw = new FileWriter(".\\ficheros\\resul.json");

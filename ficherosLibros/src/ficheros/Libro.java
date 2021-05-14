@@ -62,7 +62,7 @@ public class Libro {
 
 	@Override
 	public String toString() {
-		return "Libro " + titulo + ", ean " + ean + ", editorial " + editorial + ", digital " + ((digital=true) ? "S" : "N");
+		return "Libro " + titulo + ", ean " + ean + ", editorial " + editorial + ", digital " + ((digital==true) ? "S" : "N");
 	}
 	
 	

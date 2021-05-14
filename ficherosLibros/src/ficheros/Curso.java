@@ -58,7 +58,7 @@ public class Curso {
 		StringBuilder sb = new StringBuilder("Curso: " + nombre);
 		
 		for(Materia i: materias) {
-			sb.append("\t"+i.toString()+"\n");
+			sb.append(i.toString()+" ");
 		}
 		
 		return sb.toString();

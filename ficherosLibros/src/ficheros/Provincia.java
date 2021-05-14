@@ -60,7 +60,7 @@ public class Provincia {
 		StringBuilder sb = new StringBuilder("Provincia: " + nombre);
 		
 		for(Localidad i: localidades) {
-			sb.append("\t"+i.toString()+"\n");
+			sb.append(i.toString()+" ");
 		}
 		
 		return sb.toString();

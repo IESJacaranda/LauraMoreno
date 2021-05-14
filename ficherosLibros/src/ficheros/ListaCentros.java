@@ -23,6 +23,8 @@ public class ListaCentros {
 	public List<Provincia> getProvincias() {
 		return provincias;
 	}
+	
+	
 
 	public void setProvincias(List<Provincia> provincias) {
 		this.provincias = provincias;
@@ -62,5 +64,14 @@ public class ListaCentros {
 		return sb.toString();
 	}
 	
+	public String toJson() {
+		StringBuilder sb = new StringBuilder("Provincias: ");
+		
+		for(Provincia i: provincias) {
+			sb.append(i.toString()+" ");
+		}
+		
+		return sb.toString();
+	}
 	
 }

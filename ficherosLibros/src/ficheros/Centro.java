@@ -1,9 +1,7 @@
 package ficheros;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Centro {
 	
@@ -75,7 +73,7 @@ public class Centro {
 		StringBuilder sb = new StringBuilder("Centro: " + nombre );
 		
 		for(Curso i: cursos) {
-			sb.append("\t"+i.toString()+"\n");
+			sb.append(i.toString()+" ");
 		}
 		
 		return sb.toString();

@@ -62,7 +62,7 @@ public class Localidad {
 		StringBuilder sb = new StringBuilder("Localidad: " + nombre);
 		
 		for(Centro i: centros) {
-			sb.append("\t"+i.toString()+"\n");
+			sb.append(i.toString()+" ");
 		}
 		
 		return sb.toString();
