@@ -12,7 +12,7 @@ public class Main {
 		f.cargaDatos(f);
 		//System.out.println(f.muestraCasetasCalle("JOSELITO EL GALLO"));
 		//System.out.println(f.muestraNumCasetasPorCalle());
-		//f.eliminaCaseta("JUAN BELMONTE", 10);
+		//f.eliminaCaseta("JUAN BELMONTE", 53);
 		GUI(f);
 
 	}

@@ -100,7 +100,7 @@ public class Feria {
 	public String toString() {
 		StringBuilder sb = new StringBuilder("La feria se compone de: ");
 		for (Calle calle : calles) {
-			sb.append(calle.toString() + "\n");
+			sb.append(calle.toString());
 		}
 		return sb.toString();
 	}
@@ -128,7 +128,7 @@ public class Feria {
 
 			
 			final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-			final String resul = gson.toJson(f);// .toString() se puede poner pero para verlo mejor en windows lo dejo
+			final String resul = gson.toJson(f.toString());// .toString() se puede poner pero para verlo mejor en windows lo dejo
 												// sin toString;
 
 			FileWriter fw = new FileWriter(".\\fichero\\resul.json");

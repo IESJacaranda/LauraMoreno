@@ -78,8 +78,12 @@ public class Caseta {
 	@Override
 	public String toString() {
 		
-		return "Caseta: titulo=" + titulo + ", numero=" + numero + ", modulo=" + modulo + ", clase=" + clase
-				+ ((entidad=="") ? ", " : ", entidad="+entidad) + ", id=" + id;
+		return "Caseta: titulo:" + titulo + ", numero:" + numero + ", modulo:" + modulo + ", clase:" + clase
+				+ ((entidad=="") ? ", " : ", entidad:"+entidad) + ", id:" + id;
+	}
+
+	public void setNumero(String numero) {
+		this.numero = numero;
 	}
 	
 	
