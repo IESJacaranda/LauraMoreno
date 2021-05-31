@@ -19,7 +19,7 @@ public class Provincia {
 		if(!this.localidades.contains(local)) {
 			localidades.add(local);
 		}else {
-			this.localidades.get(this.localidades.indexOf(local)).addCentro(centro, curso, ma);;
+			this.localidades.get(this.localidades.indexOf(local)).addCentro(centro, curso, ma);
 		}
 	}
 

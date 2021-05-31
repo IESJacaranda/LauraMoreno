@@ -2,18 +2,21 @@ package boletinJUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class AccountTest {
-
-	@Test
-	void testAccount() {
-		fail("Not yet implemented");
+	Account account;
+	
+	@BeforeEach
+	void init() {
+		Account account = new Account("pepe",123, 20);
 	}
 
 	@Test
-	void testDeposit() {
-		fail("Not yet implemented");
+	void testDeposit() {//devuelve false si no se añade dinero. No recoge que sea 0
+		assertTrue(account.deposit(30.00f));
+		assertFalse(account.deposit(-1.00f));
 	}
 
 	@Test

@@ -73,7 +73,7 @@ public class Centro {
 		StringBuilder sb = new StringBuilder("Centro: " + nombre );
 		
 		for(Curso i: cursos) {
-			sb.append(i.toString()+" ");
+			sb.append(i.toString()+"\n");
 		}
 		
 		return sb.toString();
